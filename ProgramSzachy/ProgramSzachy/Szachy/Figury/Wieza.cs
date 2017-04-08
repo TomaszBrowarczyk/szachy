@@ -3,15 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProgramSzachy.Atrybuty;
 
 namespace ProgramSzachy.Szachy.Figury
 {
-    class Wieza : Figura
+    public class Wieza : Figura
     {
-        protected override bool CanBeMoved(string position)
+        /*
+         protected override bool CanBeMoved(string position)
         {
             //kod
             return true;
         }
+        */
+        public Wieza(string nazwa, Pozycja pozycja, Kolor kolor) : base(nazwa, pozycja, kolor)
+        {
+        }
+
+        public override bool czyMozliwyRuch(Pozycja cel)
+        {
+            if (cel.X != this.Pozycja.X && cel.Y != this.Pozycja.Y)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
     }
 }
