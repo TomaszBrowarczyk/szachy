@@ -18,7 +18,7 @@ namespace ProgramSzachy
             */
 
             var szachownica = new Szachownica();
-            var cel = new Pozycja(6, 1);
+            var cel = new Pozycja(7, 6);
             var figura = szachownica.PobierzFigure(cel);
 
             Console.WriteLine(figura.ToString());

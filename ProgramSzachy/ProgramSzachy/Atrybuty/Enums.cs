@@ -8,7 +8,6 @@ namespace ProgramSzachy.Atrybuty
 {
     public enum Kolor
     {
-        Bialy,
-        Czarny
+        Bialy, Czarny
     }
 }
