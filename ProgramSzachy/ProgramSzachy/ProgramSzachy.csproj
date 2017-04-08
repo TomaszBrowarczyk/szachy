@@ -45,10 +45,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Szachy\Figura.cs" />
+    <Compile Include="Szachy\Figury\Hetman.cs" />
     <Compile Include="Szachy\Figury\Krol.cs" />
     <Compile Include="Szachy\Figury\Krolowa.cs" />
     <Compile Include="Szachy\Figury\Laufer.cs" />
     <Compile Include="Szachy\Figury\Pionek.cs" />
+    <Compile Include="Szachy\Figury\Skoczek.cs" />
+    <Compile Include="Szachy\Figury\Wieza.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
