@@ -15,8 +15,7 @@ namespace ProgramSzachy.Szachy.Figury
             return true;
         }
         */
-        public Pionek(string nazwa, Pozycja pozycja, Kolor kolor)
-            : base(nazwa, pozycja, kolor)
+        public Pionek(string nazwa, Pozycja pozycja, Kolor kolor) : base(nazwa, pozycja, kolor)
         {
         }
 
