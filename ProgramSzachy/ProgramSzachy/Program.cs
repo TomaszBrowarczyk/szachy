@@ -18,7 +18,13 @@ namespace ProgramSzachy
 
             Console.WriteLine(b.ToString());
             Console.ReadKey();
-            
+
+            /*
+            Pozycja p = new Pozycja("B5");
+            Console.WriteLine(p.X);
+            */
         }
     }
+
+        
 }
