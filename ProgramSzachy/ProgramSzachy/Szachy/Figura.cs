@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProgramSzachy.Atrybuty;
 
 namespace ProgramSzachy.Szachy
 {
-    abstract class Figura
+    public abstract class Figura
     {
+        /*
         #region Properties
 
         public string Name { get; set; }
@@ -92,5 +94,47 @@ namespace ProgramSzachy.Szachy
 
         }
         #endregion
+        */
+      
+        protected string nazwa;
+        protected Pozycja pozycja;
+        protected Kolor kolor;
+
+        public string Nazwa
+        {
+            get { return nazwa; }
+            set { nazwa = value; }
+        }
+
+        #region Pozycja
+        public Pozycja Pozycja
+        {
+            get { return pozycja; }
+            set { pozycja = value; }
+        }
+
+        #endregion
+
+        #region Kolor
+        public Kolor Kolor
+        {
+            get { return kolor; }
+            set { kolor = value; }
+        }
+
+        #endregion
+
+        public Figura(string nazwa, Pozycja pozycja, Kolor kolor)
+        {
+            this.nazwa = nazwa;
+            this.pozycja = pozycja;
+            this.kolor = kolor;
+        }
+
+        public abstract bool czyMozliwyRuch(Pozycja pozycja);
+        public override string ToString()
+        {
+            return nazwa + " " + kolor + " " + pozycja.X + "," + pozycja.Y;
+        }
     }
 }
