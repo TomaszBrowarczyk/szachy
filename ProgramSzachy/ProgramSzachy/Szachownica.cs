@@ -64,7 +64,7 @@ namespace ProgramSzachy
         {
             Figura figura = PobierzFigure(staraPozycja);
 
-            if (figura != null && PobierzFigure(nowaPozycja) == null && figura.czyMozliwyRuch(nowaPozycja))
+            if (figura != null && PobierzFigure(nowaPozycja) == null && figura.CzyMozliwyRuch(nowaPozycja))
             {
                 Console.WriteLine(figura.ToString());
                 figura.Pozycja = nowaPozycja;

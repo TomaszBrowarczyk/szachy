@@ -131,7 +131,7 @@ namespace ProgramSzachy.Szachy
             this.kolor = kolor;
         }
 
-        public abstract bool czyMozliwyRuch(Pozycja pozycja);
+        public abstract bool CzyMozliwyRuch(Pozycja pozycja);
         public override string ToString()
         {
             return nazwa + " " + kolor + " " + pozycja.X + "," + pozycja.Y;

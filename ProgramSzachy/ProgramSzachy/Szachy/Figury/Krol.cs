@@ -21,7 +21,7 @@ namespace ProgramSzachy.Szachy.Figury
         {
         }
 
-        public override bool czyMozliwyRuch(Pozycja cel)
+        public override bool CzyMozliwyRuch(Pozycja cel)
         {
             if ((Math.Abs(cel.X - this.Pozycja.X) == 1 && cel.Y == this.Pozycja.Y) ||
                 (Math.Abs(cel.Y - this.Pozycja.Y) == 1 && cel.X == this.Pozycja.X))

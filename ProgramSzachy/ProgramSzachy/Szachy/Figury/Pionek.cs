@@ -20,7 +20,7 @@ namespace ProgramSzachy.Szachy.Figury
         {
         }
 
-        public override bool czyMozliwyRuch(Pozycja cel)
+        public override bool CzyMozliwyRuch(Pozycja cel)
         {
             if (cel.X != this.Pozycja.X || cel.Y - 1 != this.Pozycja.Y)
             {
