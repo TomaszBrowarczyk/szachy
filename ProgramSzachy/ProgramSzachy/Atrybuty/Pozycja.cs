@@ -23,11 +23,12 @@ namespace ProgramSzachy.Atrybuty
             set { y = value; }
         }
 
+        #region Konstruktor i Destrktor
         public Pozycja(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
-
+        #endregion
     }
 }
