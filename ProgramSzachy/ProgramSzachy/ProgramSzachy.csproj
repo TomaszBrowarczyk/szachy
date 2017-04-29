@@ -46,6 +46,7 @@
     <Compile Include="Atrybuty\Enums.cs" />
     <Compile Include="Atrybuty\Konstruktor.cs" />
     <Compile Include="Atrybuty\Pozycja.cs" />
+    <Compile Include="Atrybuty\PozycjaWyjsciowa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Szachownica.cs" />

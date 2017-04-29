@@ -51,7 +51,25 @@ namespace ProgramSzachy
             Figury.Add(new Krol("Skoczek", new Pozycja(4, 7), Kolor.Czarny));
         }
 
+        public static Szachownica Instance
+        {
+            get
+            {
+                return Szachownica;
+            }
+        }
 
+        static Szachownica()
+        {
+
+        }
+        /*
+        private Szachownica()
+        {
+            plansza = new string[boardSize, boardSize];
+            plansza.Fill(fillPattern1, fillPattern2, boardSize);
+        }
+        */
         public Figura PobierzFigure(Pozycja pozycja)
         {
             foreach (var figura in Figury)
@@ -79,5 +97,21 @@ namespace ProgramSzachy
 
             return false;
         }
+        #region Wlasciwosci
+
+        public string this[Figura f, Pozycja pos]
+        {
+            get
+            {
+                return board[pos.iX, pos.Y];
+            }
+            set
+            {
+                f.Position = pos;
+                board[pos.iX, pos.Y] = value;
+            }
+        }
+
+        #endregion
     }
 }
