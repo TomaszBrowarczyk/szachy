@@ -8,6 +8,7 @@ namespace ProgramSzachy.Atrybuty
 {
     public class Pozycja
     {
+        #region Wlasciowsci
         private int x;
         private int y;
 
@@ -22,13 +23,20 @@ namespace ProgramSzachy.Atrybuty
             get { return y; }
             set { y = value; }
         }
+        #endregion
 
         #region Konstruktor i Destrktor
         public Pozycja(int x, int y)
+        /*{
+            this.x = x;
+            this.y = y;
+        */}
+        
         {
             this.x = x;
             this.y = y;
         }
-        #endregion
-    }
+
+    #endregion
+}
 }
