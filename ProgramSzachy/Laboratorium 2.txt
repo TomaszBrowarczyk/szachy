@@ -1,0 +1,4 @@
+new jest operatorem (mo¿na go przeci¹¿yæ jak inne operatory)
+	Jedynym zadaniem new jest powiadomienie kompilatora, ¿e przes³aniamy funkcjê niepolimorficzn¹ œwiadomie
+override jest specyfikatorem
+	Metody abstrakcyjne s¹ przes³aniane, dziêki temu osi¹ga siê wielopostaciowoœæ interfejsu polimorficznego w obrêbie klas znajduj¹cych siê w relacji dziedziczenia. Metody polimorficzne przes³ania siê s³owem kluczowym override.
