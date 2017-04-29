@@ -124,17 +124,21 @@ namespace ProgramSzachy.Szachy
 
         #endregion
 
+        #region Figura
         public Figura(string nazwa, Pozycja pozycja, Kolor kolor)
         {
             this.nazwa = nazwa;
             this.pozycja = pozycja;
             this.kolor = kolor;
         }
+        #endregion
 
         public abstract bool CzyMozliwyRuch(Pozycja pozycja);
         public override string ToString()
         {
             return nazwa + " " + kolor + " " + pozycja.X + "," + pozycja.Y;
         }
+        
+
     }
 }

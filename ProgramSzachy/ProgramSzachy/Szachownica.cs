@@ -12,6 +12,12 @@ namespace ProgramSzachy
     public class Szachownica
     {
         private List<Figura> Figury;
+        /*
+         *modyfikatory, new, override
+         * szachownica, indekser
+         * interface, iserializable
+         * 
+         */
 
         public Szachownica()
         {
@@ -38,11 +44,11 @@ namespace ProgramSzachy
             Figury.Add(new Pionek("Pionek 6", new Pozycja(5, 6), Kolor.Czarny));
             Figury.Add(new Pionek("Pionek 7", new Pozycja(6, 6), Kolor.Czarny));
             Figury.Add(new Pionek("Pionek 8", new Pozycja(7, 6), Kolor.Czarny));
-            Figury.Add(new Wieza("Wieza 1", new Pozycja(0, 5), Kolor.Czarny));
-            Figury.Add(new Wieza("Wieza 2", new Pozycja(7, 5), Kolor.Czarny));
-            Figury.Add(new Krol("Krol", new Pozycja(4, 5), Kolor.Czarny));
-            Figury.Add(new Krol("Skoczek", new Pozycja(1, 5), Kolor.Czarny));
-            Figury.Add(new Krol("Skoczek", new Pozycja(4, 5), Kolor.Czarny));
+            Figury.Add(new Wieza("Wieza 1", new Pozycja(0, 7), Kolor.Czarny));
+            Figury.Add(new Wieza("Wieza 2", new Pozycja(7, 7), Kolor.Czarny));
+            Figury.Add(new Krol("Krol", new Pozycja(4, 7), Kolor.Czarny));
+            Figury.Add(new Krol("Skoczek", new Pozycja(1, 7), Kolor.Czarny));
+            Figury.Add(new Krol("Skoczek", new Pozycja(4, 7), Kolor.Czarny));
         }
 
 
