@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atrybuty\EnumExtensions.cs" />
     <Compile Include="Atrybuty\Enums.cs" />
+    <Compile Include="Atrybuty\Konstruktor.cs" />
     <Compile Include="Atrybuty\Pozycja.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
