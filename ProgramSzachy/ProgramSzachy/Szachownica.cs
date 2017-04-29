@@ -17,8 +17,27 @@ namespace ProgramSzachy
          * szachownica, indekser
          * interface, iserializable
          * 
+         * Lab3
+         * obsługa zdarzeń 
+         * musi wypisać na konsole np. przesunieto 
+         * 
+         * metody rozszerzające 
+         * klasa string
+         * X (this string)
+         * string x;
+         *      y.x(...)
+         *      
+         *   --
+         *   string y = ......
+         *   y IsCapitalized      this szachownica 
+         *   
+         *   ---
+         *   delegaty
+         *   
+         *   
          */
 
+          
         public Szachownica()
         {
             Figury = new List<Figura>();
@@ -113,5 +132,31 @@ namespace ProgramSzachy
         }
 
         #endregion
+        /*
+        
+        #region zdarzenia
+        public class Stock
+        {
+            string symbol;
+            decimal price;
+            public Stock (string symbol) { this.symbol = symbol; }
+            public event EventHandler PriceChanged;
+            protected virtual void OnPriceChanged (EventArgs e)
+            {
+                if (PriceChanged != null) PriceChanged(this, e);
+            }
+            public decimal Price
+            {
+                get { return price; }
+                set
+                {
+                    if (price == value) return;
+                    price = value;
+                    OnPriceChanged(EventArgs.Empty);
+                }
+            }
+        }
+        #endregion
+    */
     }
 }
