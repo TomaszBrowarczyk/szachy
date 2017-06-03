@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ProgramSzachy.Szachy;
 using ProgramSzachy.Szachy.Figury;
-using ProgramSzachy.Atrybuty;
 
-namespace ProgramSzachy.Szachy.Figury
+namespace ProgramSzachy.Atrybuty
 {
     static class PozycjaWyjsciowa
     {
