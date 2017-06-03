@@ -12,5 +12,11 @@ namespace ProgramSzachy.Atrybuty
         {
             return Enum.GetName(typeof(Kolory), kolor);
         }
+        /*
+        public static void IleFigur(this Szachownica szachownica)
+        {
+            Console.WriteLine(szachownica.ileFigur());
+        }
+        */
     }
 }

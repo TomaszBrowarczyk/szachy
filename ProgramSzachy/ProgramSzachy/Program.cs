@@ -26,8 +26,10 @@ namespace ProgramSzachy
             Console.WriteLine(((Pionek)figura).ToString()); 
             Console.WriteLine(((Pionek)figura).ToString("moj"));
 
-            szachownica.PrzestawFigure(new Pozycja(1, 1), cel);
+            szachownica.PrzestawFigure(figura.Pozycja, cel);
+            //szachownica.PrzestawFigure(new Pozycja(1, 1), cel);
 
+            szachownica.IleFigur();
         }
         /*
         public static void Przesunieto(object sender, EventArgs e)

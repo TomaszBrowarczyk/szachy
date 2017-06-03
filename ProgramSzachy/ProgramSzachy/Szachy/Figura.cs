@@ -7,6 +7,9 @@ using ProgramSzachy.Atrybuty;
 
 namespace ProgramSzachy.Szachy
 {
+    public delegate void PozycjaZmienionaEventHandler(Pozycja obecnaPozycja);
+
+
     public abstract class Figura
     {
         /*
@@ -108,9 +111,18 @@ namespace ProgramSzachy.Szachy
 
         #region Pozycja
         public Pozycja Pozycja
-        {
+        /*{
             get { return pozycja; }
             set { pozycja = value; }
+        }
+        */
+        {
+            get { return pozycja; }
+            set
+            {
+                PozycjaZmieniona(pozycja);
+                pozycja = value;
+            }
         }
 
         #endregion
@@ -130,6 +142,8 @@ namespace ProgramSzachy.Szachy
             this.nazwa = nazwa;
             this.pozycja = pozycja;
             this.kolor = kolor;
+            PozycjaZmieniona = ZmianaPola;
+            PozycjaZmieniona += BylRuch;
         }
         #endregion
 
@@ -138,7 +152,23 @@ namespace ProgramSzachy.Szachy
         {
             return nazwa + " " + kolor + " " + pozycja.X + "," + pozycja.Y;
         }
+
+        private void ZmianaPola(Pozycja obecnaPozycja)
+        {
+            Console.WriteLine("Zdarzenie 1. Nowa pozycja to: {0} {1}", obecnaPozycja.X, obecnaPozycja.Y);
+        }
+
         
+        private void BylRuch(Pozycja obecnaPozycja)
+        {
+            Console.WriteLine("Zdarzenie 2. Nastapil ruch");
+        }
+
+       
+        /// delegata
+     
+        public event PozycjaZmienionaEventHandler PozycjaZmieniona;
+
 
     }
 }

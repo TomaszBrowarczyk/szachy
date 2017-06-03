@@ -10,7 +10,7 @@ namespace ProgramSzachy.Szachy.Figury
     internal class Skoczek : Figura
     {
         /*
-        protected override bool CanBeMoved(string position)
+        protected override bool CzyMozliwyRuch(string position)
         {
             //kod
             return true;

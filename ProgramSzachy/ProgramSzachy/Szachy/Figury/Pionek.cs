@@ -9,7 +9,7 @@ namespace ProgramSzachy.Szachy.Figury
 {
     public class Pionek : Figura
     {
-        /*protected override bool CanBeMoved(string position)
+        /*protected override bool CzyMozliwyRuch(string position)
         {
             //kod
             return true;
