@@ -19,7 +19,7 @@ namespace ProgramSzachy
             */
 
             var szachownica = new Szachownica();
-            var cel = new Pozycja(7, 6);
+            //var cel = new Pozycja(7, 6);
             var figura = szachownica.PobierzFigure(cel);
 
             Console.WriteLine(figura.ToString());
@@ -27,6 +27,7 @@ namespace ProgramSzachy
             Console.WriteLine(((Pionek)figura).ToString("moj"));
 
             szachownica.PrzestawFigure(figura.Pozycja, cel);
+            var cel = new Pozycja(7, 6);
             //szachownica.PrzestawFigure(new Pozycja(1, 1), cel);
 
             szachownica.IleFigur();

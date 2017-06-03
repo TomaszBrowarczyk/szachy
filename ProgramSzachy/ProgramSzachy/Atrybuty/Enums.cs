@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ProgramSzachy.Atrybuty
 {
     public enum Kolor
-    //enum Słowo kluczowe jest używany do zadeklarować wyliczenia typu samodzielnego, która składa się z zestawem stałych o nazwie listy Moduł wyliczający.
+    //enum Słowo kluczowe jest używany aby zadeklarować wyliczenia typu samodzielnego, która składa się z zestawem stałych o nazwie listy Moduł wyliczający.
     {
         Bialy, Czarny
     }

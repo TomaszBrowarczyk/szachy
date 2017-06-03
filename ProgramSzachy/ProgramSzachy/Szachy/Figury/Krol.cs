@@ -16,6 +16,8 @@ namespace ProgramSzachy.Szachy.Figury
             return true;
         }
         */
+
+        private const string NAME = "Król";
         public Krol(string nazwa, Pozycja pozycja, Kolor kolor)
             : base(nazwa, pozycja, kolor)
         {
@@ -30,6 +32,10 @@ namespace ProgramSzachy.Szachy.Figury
             }
 
             return false;
+        }
+        public new string ToString()
+        {
+            return $"King class: {Kolor} {Nazwa}";
         }
     }
 }
