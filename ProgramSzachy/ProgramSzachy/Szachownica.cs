@@ -34,10 +34,13 @@ namespace ProgramSzachy
          *   ---
          *   delegaty
          *   
-         *   
+         *lab4
+         * Zaimplementuj wzorce projektowe:
+         * - Toolbox (Singleton Toolbox) do przechowywania szachownicy
+         * - Metoda wytwórcza (Factory) do generowania figur szachowych
          */
 
-          
+
         public Szachownica()
         {
             Figury = new List<Figura>();
@@ -157,6 +160,161 @@ namespace ProgramSzachy
             }
         }
         #endregion
-    */
+        */
+
+
+        #region Singleton
+
+
+        public class Singleton
+        {
+            // the single instance is defined in a static field
+            private static readonly Singleton _instance = new Singleton();
+
+            // constructor private so users can't instantiate on their own
+            private Singleton()
+            {
+                //Class initialization goes here.
+            }
+
+            public void someSingletonMethod()
+            {
+                //Some method that acts on the Singleton.
+            }
+
+            private static Singleton _instance;
+            // read-only property that returns the static field
+            public static Singleton Instance
+            {
+                get
+                {
+                    if (_instance == null)
+                        _instance = new Singleton();
+                    return _instance;
+                }
+            }
+        }
+
+        public class SingletonController : MonoBehaviour
+        {
+            //Create a local reference so that the editor can read it.
+            public Singleton instance;
+            void Awake()
+            {
+                instance = Singleton.Instance;
+            }
+            //You can reference the singleton instance directly, but it might be better to just reflect its methods in the controller.
+            public void someMethod()
+            {
+                instance.someSingletonMethod();
+            }
+        }
+
+
+
+        public class Singleton : MonoBehavior
+        {
+            private static Singleton _instance;
+
+            public static Singleton Instance
+            {
+                get { return _instance; }
+            }
+
+            private void Awake()
+            {
+                if (_instance != null && _instance != this)
+                {
+                    Destroy(this.gameObject);
+                }
+                else
+                {
+                    _instance = this;
+                    DontDestroyOnLoad(this.GameObject);
+                }
+            }
+        }
+
+
+#endregion
+
+
+        #region Toolbox
+        public class Toolbox
+        {
+            private static Toolbox _instance;
+
+            public static Toolbox Instance
+            {
+                get
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new Toolbox();
+                    }
+                    return _instance;
+                }
+            }
+
+            protected Toolbox()
+            {
+                Initialize();
+            }
+
+            protected void Initialize()
+            {
+                // Your code here
+            }
+
+            private MyComponent _myComponent;
+
+            public MyComponent MyComponent()
+            {
+                get {
+                    return _myComponent();
+                }
+            }
+     ... 
+
+     // Optional: standard extension allowing
+     // runtime registration of global objects. 
+     private Map components;
+
+            public Object GetComponent(String componentName)
+            {
+                return components.Get(componentName);
+            }
+
+            public void RegisterComponent(String componentName, Object component)
+            {
+                components.Put(componentName, component);
+            }
+
+            public void DeregisterComponent(String componentName)
+            {
+                components.Remove(componentName);
+            }
+
+        }
+        #endregion
+
+        #region Factory
+        class ServerFactory
+        {
+            public:
+        // By default return a RealServer
+        ServerInterface& getServer();
+
+            // Set a non default server:
+            void setServer(ServerInterface& server);
+        };
+
+        class ServerInterface { /* define Interface */ };
+
+        class RealServer : public ServerInterface {}; // This is a singleton (potentially)
+
+        class TestServer : public ServerInterface {}; // This need not be.
+
+        #endregion
     }
 }
