@@ -19,7 +19,29 @@ namespace ProgramSzachy.Atrybuty
              */ 
         }
 
-                 
+        #region Factory
+        /*
+        http://www.dofactory.com/net/factory-method-design-pattern
+        
+        class ServerFactory
+        {
+            public:
+        // By default return a RealServer
+        ServerInterface& getServer();
+
+            // Set a non default server:
+            void setServer(ServerInterface& server);
+        };
+
+        class ServerInterface { // define Interface // };
+
+        class RealServer : public ServerInterface {}; // This is a singleton (potentially)
+
+        class TestServer : public ServerInterface {}; // This need not be.
+
+
+        */
+
         Figura retFigura = null;
 
             switch (Figura)
@@ -37,7 +59,7 @@ namespace ProgramSzachy.Atrybuty
             }
 
             return retFigura;
-
-            */ 
+        
+        #endregion
     }
 }
